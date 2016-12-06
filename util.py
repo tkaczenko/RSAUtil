@@ -17,7 +17,7 @@ def eratosthenes( len ):
             multiples.update(range(i*i, len, i))
 
 def checkDivisibility( num ):
-    return all(num % x == 0 for x in eratosthenes(num))
+    return all(num % x != 0 for x in eratosthenes(2000))
 
 def MillerRabin( n, k = 50 ):
     r, s = 0, n - 1
@@ -38,11 +38,11 @@ def MillerRabin( n, k = 50 ):
     return True
 
 def test( num ):
-    while (checkDivisibility(num) == False and MillerRabin(num, 3) == False):
+    while (not MillerRabin(num) or not checkDivisibility(num)):
         num += 2
     return num
 
-def powMod( a, b, n, flag ):
+def powMod( a, b, n, flag = True ):
     d = 1
     b_bin = bin(b)[2:]
     for i in range(len(b_bin)):
