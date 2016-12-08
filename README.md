@@ -8,3 +8,9 @@ Uses:
 * [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 * [Modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation)
 * [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+
+## Screenshots
+These are screens of [app.py](/app.py) 
+
+![here] (/screens/1.png "Main sreen")
+![here] (/screens/2.png "Generated number")
